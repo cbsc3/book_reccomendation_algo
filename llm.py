@@ -3,8 +3,9 @@ import os
 from google import genai
 from google.genai import types
 
+#os.environ.get("GEMINI_KEY")
 client = genai.Client(
-        api_key="AIzaSyCxP25ONPfFHop-LPXiIhDXAh8bD7KT1ng",
+        api_key=os.environ.get("GEMINI_KEY"),
     )
 
 def key_word_extractor(summary):

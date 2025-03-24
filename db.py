@@ -1,7 +1,9 @@
 from pymongo import MongoClient
 import uuid
 import datetime
-cluster = MongoClient(f'mongodb+srv://dbfoward:QggcRBkoWxFEmRW5@cluster0.9zntn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+import os
+key = os.environ.get("MONGO_KEY")
+cluster = MongoClient(f'mongodb+srv://dbfoward:{key}@cluster0.9zntn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 books_db = cluster['book_data']
 books_read = books_db['books_read']
 
