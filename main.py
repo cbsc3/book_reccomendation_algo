@@ -8,7 +8,7 @@ import time
 
 #Extracting important information from the API Call
 
-def new_book(book_name):
+def new_book(book_name, references):
     google_books = requests.get(f'https://www.googleapis.com/books/v1/volumes?q={book_name}' )
     try:
         book_title = google_books.json()['items'][0]['volumeInfo']['title']
@@ -23,7 +23,7 @@ def new_book(book_name):
         for regex_key_word in regex_key_words:
             if regex_key_word != '':
                 key_words_parsed.append(regex_key_word)
-        add_book = bookManage(book_title, author, desc, page_count, key_words_parsed, genre, time_line_generator(), genre_abstractor(genre)).add_book()
+        add_book = bookManage(book_title, author, desc, page_count, key_words_parsed, genre, time_line_generator(), genre_abstractor(genre), references).add_book()
 
             
         #new_book = bookManage(book_title, author, desc, page_count).add_book()
@@ -34,7 +34,7 @@ def new_book(book_name):
 
 
 for i in trending_fantasy:
-        new_book(i)
+        new_book(i, trending_fantasy)
 
 
     
