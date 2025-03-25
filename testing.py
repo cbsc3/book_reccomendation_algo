@@ -404,7 +404,7 @@ def time_line_generator():
         day = random.choice(days)
         return datetime.datetime(2025, month, day)
     except ValueError as date_out_of_range:
-        day = random.choice(days)
+        day = 29
         return datetime.datetime(2025, month, day)
 
 def plot_date_genre():
