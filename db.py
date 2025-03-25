@@ -8,6 +8,15 @@ cluster = MongoClient(f'mongodb+srv://dbfoward:{key}@cluster0.9zntn.mongodb.net/
 books_db = cluster['book_data']
 books_read = books_db['books_read']
 
+def retrieve_last_book():
+   all_books_stored = books_read.find({"reading":True})
+   tracker = 0
+   query_buffer = []
+   for i in all_books_stored:
+      tracker += 1
+      query_buffer.append(i)
+   return query_buffer[tracker - 1]
+print(retrieve_last_book())
 
 class bookManage():
     def __init__(self, book_title, author, desc, page_count, key_words, genre, date, deviation):
