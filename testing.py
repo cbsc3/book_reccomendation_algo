@@ -441,4 +441,3 @@ def plot_date_genre():
 
     plt.show()
 
-plot_date_genre()

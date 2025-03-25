@@ -9,7 +9,6 @@ import time
 #Extracting important information from the API Call
 
 def new_book(book_name):
-    time.sleep(1)
     google_books = requests.get(f'https://www.googleapis.com/books/v1/volumes?q={book_name}' )
     try:
         book_title = google_books.json()['items'][0]['volumeInfo']['title']
@@ -19,7 +18,7 @@ def new_book(book_name):
         genre = google_books.json()['items'][0]['volumeInfo']['categories']
         #print(book_title, author, desc, page_count, key_word_extractor(desc))
         key_words = key_word_extractor(desc)
-        regex_key_words= re.split(r"\W", key_words)
+        regex_key_words= re.split(r"\W", str(key_words))
         key_words_parsed = []
         for regex_key_word in regex_key_words:
             if regex_key_word != '':
@@ -31,6 +30,11 @@ def new_book(book_name):
     except KeyError as book_not_found:
         print("The book does not exist")
 
+
+
+
 for i in trending_fantasy:
-    new_book(i)
-    time.sleep(2)
+        new_book(i)
+
+
+    

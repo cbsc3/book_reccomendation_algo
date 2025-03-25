@@ -2,6 +2,7 @@ from pymongo import MongoClient
 import uuid
 import datetime
 import os
+
 key = os.environ.get("MONGO_KEY")
 cluster = MongoClient(f'mongodb+srv://dbfoward:{key}@cluster0.9zntn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 books_db = cluster['book_data']
@@ -19,6 +20,7 @@ class bookManage():
        self.date = date
        self.deviation = deviation
     def add_book(self):
+     try:
         book = {
             "book_title":self.book_title,
             "author":self.author,
@@ -33,4 +35,6 @@ class bookManage():
         }
         books_read.insert_one(book)
         return book
+     except TypeError as llm_malfunction:
+        print("All modules dependent have retired...")
     
