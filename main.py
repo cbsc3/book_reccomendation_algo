@@ -33,8 +33,8 @@ def new_book(book_name, references):
 
 
 
-for i in trending_fantasy:
-        new_book(i, trending_fantasy)
+for i in trending_third:
+        new_book(i, trending_third)
 
 
     

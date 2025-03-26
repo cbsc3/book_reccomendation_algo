@@ -53,7 +53,7 @@ class bookManage():
         for reference in self.references:
            place_keeper += 1
            if last_retrieved == reference:
-              next_book = self.references[place_keeper + 1]
+              next_book = self.references[place_keeper]
               print(next_book)
       
 
