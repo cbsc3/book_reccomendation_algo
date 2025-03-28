@@ -2,7 +2,6 @@ from pymongo import MongoClient
 import uuid
 import datetime
 import os
-from cache import cache_init
 from colorama import Fore
 
 key = os.environ.get("MONGO_KEY")
