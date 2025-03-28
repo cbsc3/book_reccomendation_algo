@@ -7,14 +7,27 @@ def m(x_1: float, y_1: float, x_2: float, y_2: float):
 def lin_regres(m: float, x: float, y: float):
     #y^1 or f(x) - y = m(x - x^1)
     m_x = m * x
+    global left
+    global right
     if y >= 0:
         left = f"y - {y}"
     if y < 0:
         sign_differential = y * -1
         left = f"y + {sign_differential}"
+    if m_x >= 0: 
+        right = f"{m}x + {m_x}"
+    if m_x < 0:
+        right = f"{m}x{m_x}"
+    
+
+    return f"{left} = {right}"
+    
+    
+    
+    
     
 
     #return f"y - {y} = {m}(x - {x})""
     return left
 
-print(lin_regres(5.0, 2.0, 1.0))
+print(lin_regres(-5.0, 2.0, 1.0))
