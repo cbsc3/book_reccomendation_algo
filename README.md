@@ -11,10 +11,11 @@ I felt as though many book reccomendation systems don't really work and I am bui
 
 This repo really follows the logistics, I hope to get the web app running soon after writing a POC
  
-# Cache System Logic
+# Basic Mathematics Behind the System 
 
-This experiment is heavily dependent on the non relational database MongoDB; for the POC, I'm using the free version, so I had to get a bit crafty. Here is my proposed solution
+Here, I have demonstrated the three categorisation methods. I will implement basic calculus and algebra to analyze trends.
 
+<img src="https://i.ibb.co/MxvSpzvk/IMG-643-BEA78245-A-1.jpg" alt="IMG-643-BEA78245-A-1" border="0">
 
-<img src="https://i.ibb.co/Zz8y1x5X/Screenshot-2025-03-25-at-4-19-36-PM.png" alt="Screenshot-2025-03-25-at-4-19-36-PM" border="0">
+<img src="https://i.ibb.co/kV1WTMcS/IMG-643-BEA78245-A-2.jpg" alt="IMG-643-BEA78245-A-2" border="0"></a>
 
