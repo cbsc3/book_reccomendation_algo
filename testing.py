@@ -2,7 +2,7 @@ import datetime
 import random
 import matplotlib.pyplot as plt
 import numpy
-from db import books_read
+from db import books_read, relation_1
 trending_fantasy = [
     # High Fantasy
     "The Hobbit",
@@ -440,3 +440,6 @@ def plot_date_genre():
     plt.grid(True)
 
     plt.show()
+
+plot_date_genre()
+print(relation_1())

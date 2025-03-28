@@ -4,6 +4,7 @@ from db import bookManage
 import re
 from testing import trending_fantasy, trending_first, trending_second, trending_third, trending_fourth, time_line_generator
 import time
+from colorama import Fore
 
 
 #Extracting important information from the API Call
@@ -28,13 +29,15 @@ def new_book(book_name, references):
             
         #new_book = bookManage(book_title, author, desc, page_count).add_book()
     except KeyError as book_not_found:
-        print("The book does not exist")
+        print(Fore.MAGENTA + f"Google Books API does not have this title: {book_name}")
 
 
 
 
 for i in trending_third:
         new_book(i, trending_third)
+        print(Fore.YELLOW + f"Book imported: {i}")
+print(Fore.LIGHTGREEN_EX + "All books imported")
 
 
     

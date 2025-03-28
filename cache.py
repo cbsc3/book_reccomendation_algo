@@ -16,6 +16,6 @@ Schema: book = {
         }
 
 """
-def cache_init(mongo_schema):
-    cache.mset(mongo_schema)
+def cache_init(title, mongo_schema):
+    cache.mset(title, mongo_schema)
     return mongo_schema
