@@ -16,5 +16,7 @@ This repo really follows the logistics, I hope to get the web app running soon a
 These are some predicted trends using linear regression, however they will need to be supervised (which I've done with the help of an LLM)
 
 <img src="https://i.ibb.co/Gf6Lc1Rv/Screenshot-2025-03-29-at-10-49-02-AM.png" alt="Screenshot-2025-03-29-at-10-49-02-AM" border="0">
+
 <img src="https://i.ibb.co/hRnT6H2b/Screenshot-2025-03-29-at-10-49-11-AM.png" alt="Screenshot-2025-03-29-at-10-49-11-AM" border="0">
+
 <img src="https://i.ibb.co/Kxx60cW6/Screenshot-2025-03-29-at-10-49-18-AM.png" alt="Screenshot-2025-03-29-at-10-49-18-AM" border="0">
