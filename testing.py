@@ -2,7 +2,8 @@ import datetime
 import random
 import matplotlib.pyplot as plt
 import numpy
-from db import books_read, relation_1
+from db import books_read, return_date_added, return_deviations
+from linear_regression import models 
 trending_fantasy = [
     # High Fantasy
     "The Hobbit",
@@ -442,4 +443,4 @@ def plot_date_genre():
     plt.show()
 
 plot_date_genre()
-print(relation_1())
+

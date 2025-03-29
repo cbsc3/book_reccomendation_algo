@@ -20,9 +20,12 @@ def retrieve_last_book():
       query_buffer.append(i)
    return query_buffer[tracker - 1]
 
-def relation_1():
+def return_date_added():
    for i in all_books_stored:
-      print(i['date_added'], i['deviation'])
+       print(i['date_added'])
+def return_deviations():
+   for i in all_books_stored:
+      print(i['deviation'])
 
 class bookManage():
     def __init__(self, book_title, author, desc, page_count, key_words, genre, date, deviation, references):
@@ -62,4 +65,4 @@ class bookManage():
               
 
     
-relation_1()
+print(return_deviations())

@@ -11,11 +11,10 @@ I felt as though many book reccomendation systems don't really work and I am bui
 
 This repo really follows the logistics, I hope to get the web app running soon after writing a POC
  
-# Basic Mathematics Behind the System 
+# Supervision
 
-Here, I have demonstrated the three categorisation methods. I will implement basic calculus and algebra to analyze trends.
+These are some predicted trends using linear regression, however they will need to be supervised (which I've done with the help of an LLM)
 
-<img src="https://i.ibb.co/MxvSpzvk/IMG-643-BEA78245-A-1.jpg" alt="IMG-643-BEA78245-A-1" border="0">
-
-<img src="https://i.ibb.co/kV1WTMcS/IMG-643-BEA78245-A-2.jpg" alt="IMG-643-BEA78245-A-2" border="0"></a>
-
+<a href="https://ibb.co/vCFGZrkx"><img src="https://i.ibb.co/Gf6Lc1Rv/Screenshot-2025-03-29-at-10-49-02-AM.png" alt="Screenshot-2025-03-29-at-10-49-02-AM" border="0"></a>
+<a href="https://ibb.co/LzqsF69m"><img src="https://i.ibb.co/hRnT6H2b/Screenshot-2025-03-29-at-10-49-11-AM.png" alt="Screenshot-2025-03-29-at-10-49-11-AM" border="0"></a>
+<a href="https://ibb.co/LddSkD1S"><img src="https://i.ibb.co/Kxx60cW6/Screenshot-2025-03-29-at-10-49-18-AM.png" alt="Screenshot-2025-03-29-at-10-49-18-AM" border="0"></a>

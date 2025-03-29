@@ -45,9 +45,6 @@ def lin_regres(ps):
         
 
 
-    #return float_values, combine
-
-
 
 
 
