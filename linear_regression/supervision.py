@@ -6,18 +6,18 @@ from google.genai import types
 
 def generate():
     client = genai.Client(
-        api_key=os.environ.get("GEMINI_API_KEY"),
+        api_key=os.environ.get("GEMINI_KEY"),
     )
 
     files = [
         # Please ensure that the file is available in local system working direrctory or change the file path.
-        client.files.upload(file="Supervision Guidelines.pdf"),
+        client.files.upload(file="./training/Supervision Guidelines.pdf"),
         # Please ensure that the file is available in local system working direrctory or change the file path.
-        client.files.upload(file="Figure_1.png"),
+        client.files.upload(file="./training/Figure_1.png"),
         # Please ensure that the file is available in local system working direrctory or change the file path.
-        client.files.upload(file="Screenshot 2025-03-24 at 4.55.49 PM.png"),
+        client.files.upload(file="./training/Screenshot 2025-03-24 at 4.55.49 PM.png"),
         # Please ensure that the file is available in local system working direrctory or change the file path.
-        client.files.upload(file="Screenshot 2025-03-29 at 11.17.10 AM.png"),
+        client.files.upload(file="./training/Screenshot 2025-03-29 at 11.17.10 AM.png"),
     ]
     model = "gemini-2.0-flash"
     contents = [
