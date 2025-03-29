@@ -4,7 +4,7 @@ from google import genai
 from google.genai import types
 
 
-def generate():
+def supervise(path):
     client = genai.Client(
         api_key=os.environ.get("GEMINI_KEY"),
     )
@@ -13,11 +13,16 @@ def generate():
         # Please ensure that the file is available in local system working direrctory or change the file path.
         client.files.upload(file="./training/Supervision Guidelines.pdf"),
         # Please ensure that the file is available in local system working direrctory or change the file path.
-        client.files.upload(file="./training/Figure_1.png"),
+       client.files.upload(file="./training/Figure_1.png"),
         # Please ensure that the file is available in local system working direrctory or change the file path.
-        client.files.upload(file="./training/Screenshot 2025-03-24 at 4.55.49 PM.png"),
+      client.files.upload(file="./training/Screenshot 2025-03-24 at 4.55.49 PM.png"),
+
+         client.files.upload(file="./training/Screenshot 2025-03-29 at 11.17.10 AM.png"),
+
         # Please ensure that the file is available in local system working direrctory or change the file path.
-        client.files.upload(file="./training/Screenshot 2025-03-29 at 11.17.10 AM.png"),
+       client.files.upload(file=path),
+
+        
     ]
     model = "gemini-2.0-flash"
     contents = [
@@ -226,7 +231,20 @@ Let's begin. I'm ready for your graphs!
                 types.Part.from_text(text="""INSERT_INPUT_HERE"""),
             ],
         ),
-    ]
+    ],
+    """
+    types.Content(
+        role="user",
+        parts=[
+            types.Part.from_uri(
+                file_uri=files[4].uri,
+                mime_type=files[4].mime_type
+            ),
+
+            types.Part.from_text(text="Return the the specifications, based on this graph.")
+        ]
+    )
+    """
     generate_content_config = types.GenerateContentConfig(
         response_mime_type="text/plain",
         system_instruction=[
@@ -234,7 +252,7 @@ Let's begin. I'm ready for your graphs!
 """),
         ],
     )
-
+ 
     for chunk in client.models.generate_content_stream(
         model=model,
         contents=contents,
@@ -242,5 +260,9 @@ Let's begin. I'm ready for your graphs!
     ):
         print(chunk.text, end="")
 
-if __name__ == "__main__":
-    generate()
+#print(supervise("./training/Screenshot 2025-03-29 at 1.01.40 PM.png"))
+
+with open("./training/Screenshot 2025-03-29 at 1.01.40 PM.png") as w:
+    print(w)
+
+

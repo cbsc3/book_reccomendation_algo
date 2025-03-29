@@ -34,8 +34,8 @@ def new_book(book_name, references):
 
 
 
-for i in trending_third:
-        new_book(i, trending_third)
+for i in trending_second:
+        new_book(i, trending_second)
         print(Fore.YELLOW + f"Book imported: {i}")
 print(Fore.LIGHTGREEN_EX + "All books imported")
 

@@ -441,6 +441,5 @@ def plot_date_genre():
     plt.grid(True)
 
     plt.show()
-
 plot_date_genre()
 
